@@ -5,4 +5,4 @@
 
 [![Node CI](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml)
 
-[![asciicast](https://asciinema.org/a/7kIHHI0LalTaAlR9yufVpk1Ax.svg)](https://asciinema.org/a/7kIHHI0LalTaAlR9yufVpk1Ax)
+[![asciicast](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC.svg)](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC)
