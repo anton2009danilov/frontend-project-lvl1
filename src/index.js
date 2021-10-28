@@ -1,6 +1,6 @@
 import cli from './cli.js';
 
-const maxRounds = 3;
+const roundsLimit = 3;
 let userName = '';
 
 const sayHello = () => {
@@ -10,12 +10,26 @@ const sayHello = () => {
   return userName;
 };
 
-const askQuestion = (quest) => cli(quest);
-
-export default (quest, correctAnswer) => {
-  let roundNum = 0;
-
+export default (questType, generateQuest, checkAnswer) => {
+  let roundCounter = 0;
   userName = sayHello();
-  while ()
-  const userAnswer = askQuestion(quest);
+
+  while (roundCounter < roundsLimit) {
+    const questNum = generateQuest();
+    const correctAnswer = checkAnswer(questNum);
+    const userAnswer = cli(questType, questNum);
+
+    if (userAnswer === correctAnswer) {
+      roundCounter += 1;
+      console.log('Correct!');
+
+      if (roundCounter === roundsLimit) {
+        console.log(`Congratulations, ${userName}!`);
+      }
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      break;
+    }
+  }
 };
