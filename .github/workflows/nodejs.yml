@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
   strategy:
@@ -14,5 +15,5 @@ jobs:
   steps:
     - uses: actions/checkout@v2
     - name: Run linter
-      run: |
-        make lint
+        run: |
+          make lint      
