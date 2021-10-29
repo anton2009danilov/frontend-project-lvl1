@@ -5,4 +5,8 @@
 
 [![Node CI](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml)
 
+### Brain-Even Game demo:
 [![asciicast](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC.svg)](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC)
+
+### Brain-Calc Game demo:
+[![asciicast](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k.svg)](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k)
