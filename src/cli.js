@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const getUserName = () => readlineSync.question('May I have your name? ');
+const getUserName = () => {
+  const userName = readlineSync.question('May I have your name? ');
+  return (userName !== '' ? userName : 'Anonymous');
+};
 
 const getBrainEvenAnswer = (questNum) => readlineSync.question(
   'Answer "yes" if the number is even, otherwise answer "no".\n'
