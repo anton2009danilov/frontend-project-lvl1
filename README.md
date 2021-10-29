@@ -5,8 +5,11 @@
 
 [![Node CI](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml)
 
-### Brain-Even Game demo:
-[![asciicast](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC.svg)](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC)
+### Brain-Even game demo:
+<a href="https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC" target="_blank"><img src="https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC.svg" /></a>
 
-### Brain-Calc Game demo:
-[![asciicast](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k.svg)](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k)
+### Brain-Calc game demo:
+<a href="https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k" target="_blank"><img src="https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k.svg" /></a>
+
+### Brain-GCD(Greatest Common Divider) game demo:
+<a href="https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w" target="_blank"><img src="https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w.svg" /></a>
