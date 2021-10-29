@@ -10,14 +10,14 @@ const sayHello = () => {
   return userName;
 };
 
-export default (questType = null, generateQuest = null, checkAnswer = null) => {
+export default (questType = null, generateQuest = null, calcAnswer = null) => {
   let roundCounter = 0;
   userName = sayHello();
 
   while (roundCounter < roundsLimit && questType) {
-    const questNum = generateQuest();
-    const correctAnswer = checkAnswer(questNum);
-    const userAnswer = cli(questType, questNum);
+    const questData = generateQuest();
+    const userAnswer = cli(questType, questData);
+    const correctAnswer = calcAnswer(questData);
 
     if (userAnswer === correctAnswer) {
       roundCounter += 1;
