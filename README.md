@@ -10,3 +10,6 @@
 
 ### Brain-Calc Game demo:
 [![asciicast](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k.svg)](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k)
+
+### Brain-BCD(Biggest Common Divider) Game demo:
+[![asciicast](https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w.svg)](https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w)
