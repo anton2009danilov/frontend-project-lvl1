@@ -4,20 +4,6 @@ import runGame from '../src/index.js';
 const digitCapacity = 100;
 const questType = 'brain-calc';
 
-const generateQuest = () => {
-  const genNum1 = Math.floor(Math.random() * digitCapacity);
-  const genNum2 = Math.floor(Math.random() * digitCapacity);
-
-  const genSign = () => {
-    const mathSigns = ['+', '-', '*'];
-    const random = Math.floor(Math.random() * mathSigns.length);
-
-    return mathSigns[random];
-  };
-
-  return [genNum1, genNum2, genSign()];
-};
-
 const calcAnswer = (questArr) => {
   const [num1, num2, sign] = questArr;
   let result;
@@ -40,4 +26,22 @@ const calcAnswer = (questArr) => {
   return result;
 };
 
-runGame(questType, generateQuest, calcAnswer);
+const generateQuest = () => {
+  const num1 = Math.floor(Math.random() * digitCapacity);
+  const num2 = Math.floor(Math.random() * digitCapacity);
+
+  const genSign = () => {
+    const mathSigns = ['+', '-', '*'];
+    const random = Math.floor(Math.random() * mathSigns.length);
+
+    return mathSigns[random];
+  };
+
+  const sign = genSign();
+
+  const questArr = [num1, num2, sign];
+
+  return [questArr, calcAnswer(questArr)];
+};
+
+runGame(questType, generateQuest);

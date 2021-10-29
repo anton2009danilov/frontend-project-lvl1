@@ -5,7 +5,11 @@ const digitCapacity = 1000;
 const questType = 'brain-even';
 const isEven = (num) => num % 2 === 0;
 
-const generateQuest = () => Math.floor(Math.random() * digitCapacity);
 const calcAnswer = (num) => (isEven(num) ? 'yes' : 'no');
+const generateQuest = () => {
+  const num = Math.floor(Math.random() * digitCapacity);
 
-runGame(questType, generateQuest, calcAnswer);
+  return [num, calcAnswer(num)];
+};
+
+runGame(questType, generateQuest);

@@ -25,17 +25,18 @@ const findBiggestCommonDivider = (num1, num2) => {
   return result;
 };
 
-const generateQuest = () => {
-  const num1 = Math.floor(Math.random() * digitCapacity);
-  const num2 = Math.floor(Math.random() * digitCapacity);
-
-  return [num1, num2];
-};
-
 const calcAnswer = (questData) => {
   const [num1, num2] = questData;
 
   return findBiggestCommonDivider(num1, num2);
+};
+
+const generateQuest = () => {
+  const num1 = Math.floor(Math.random() * digitCapacity);
+  const num2 = Math.floor(Math.random() * digitCapacity);
+  const questArr = [num1, num2];
+
+  return [questArr, calcAnswer(questArr)];
 };
 
 runGame(questType, generateQuest, calcAnswer);
