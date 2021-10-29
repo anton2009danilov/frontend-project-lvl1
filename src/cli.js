@@ -17,6 +17,7 @@ const getBrainEvenAnswer = (questData) => {
 
 const getBrainCalcAnswer = (questData) => {
   const [[num1, num2, sign]] = questData;
+
   return readlineSync.question(
     'What is the result of the expression?\n'
   + `Question: ${num1} ${sign} ${num2}\n`
@@ -26,9 +27,20 @@ const getBrainCalcAnswer = (questData) => {
 
 const getBrainGCDAnswer = (questData) => {
   const [[num1, num2]] = questData;
+
   return readlineSync.question(
     'Find the greatest common divisor of given numbers.\n'
   + `Question: ${num1} ${num2}\n`
+  + 'Your answer: ',
+  );
+};
+
+const getBrainProgressionAnswer = (questData) => {
+  const [questString] = questData;
+
+  return readlineSync.question(
+    'What number is missing in the progression?\n'
+  + `Question: ${questString}\n`
   + 'Your answer: ',
   );
 };
@@ -41,6 +53,8 @@ export default (gameName = null, questData = null) => {
       return getBrainCalcAnswer(questData);
     case 'brain-gcd':
       return getBrainGCDAnswer(questData);
+    case 'brain-progression':
+      return getBrainProgressionAnswer(questData);
     default:
       return getUserName();
   }
