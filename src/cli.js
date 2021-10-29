@@ -5,9 +5,11 @@ const getUserName = () => {
   return (userName !== '' ? userName : 'Anonymous');
 };
 
-const getBrainEvenAnswer = (questData) => readlineSync.question('Answer "yes" if the number is even, otherwise answer "no".\n'
+const getBrainEvenAnswer = (questData) => readlineSync.question(
+  'Answer "yes" if the number is even, otherwise answer "no".\n'
   + `Question: ${questData}\n`
-  + 'Your answer: ');
+  + 'Your answer: ',
+);
 
 const getBrainCalcAnswer = (questData) => {
   const [num1, num2, sign] = questData;
@@ -18,12 +20,23 @@ const getBrainCalcAnswer = (questData) => {
   );
 };
 
+const getBrainGCDAnswer = (questData) => {
+  const [num1, num2] = questData;
+  return readlineSync.question(
+    'Find the greatest common divisor of given numbers.\n'
+  + `Question: ${num1} ${num2}\n`
+  + 'Your answer: ',
+  );
+};
+
 export default (gameName = null, questData = null) => {
   switch (gameName) {
     case 'brain-even':
       return getBrainEvenAnswer(questData);
     case 'brain-calc':
       return getBrainCalcAnswer(questData);
+    case 'brain-gcd':
+      return getBrainGCDAnswer(questData);
     default:
       return getUserName();
   }

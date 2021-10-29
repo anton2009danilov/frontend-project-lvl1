@@ -19,7 +19,7 @@ export default (questType = null, generateQuest = null, calcAnswer = null) => {
     const userAnswer = cli(questType, questData);
     const correctAnswer = calcAnswer(questData);
 
-    if (userAnswer === correctAnswer) {
+    if (userAnswer === String(correctAnswer)) {
       roundCounter += 1;
       console.log('Correct!');
 

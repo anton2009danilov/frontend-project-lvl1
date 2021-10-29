@@ -5,8 +5,8 @@ const digitCapacity = 100;
 const questType = 'brain-calc';
 
 const generateQuest = () => {
-  const genNum1 = () => Math.floor(Math.random() * digitCapacity);
-  const genNum2 = () => Math.floor(Math.random() * digitCapacity);
+  const genNum1 = Math.floor(Math.random() * digitCapacity);
+  const genNum2 = Math.floor(Math.random() * digitCapacity);
 
   const genSign = () => {
     const mathSigns = ['+', '-', '*'];
@@ -15,7 +15,7 @@ const generateQuest = () => {
     return mathSigns[random];
   };
 
-  return [genNum1(), genNum2(), genSign()];
+  return [genNum1, genNum2, genSign()];
 };
 
 const calcAnswer = (questArr) => {
@@ -37,7 +37,7 @@ const calcAnswer = (questArr) => {
       break;
   }
 
-  return String(result);
+  return result;
 };
 
 runGame(questType, generateQuest, calcAnswer);
