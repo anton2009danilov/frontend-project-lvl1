@@ -10,11 +10,11 @@ const sayHello = () => {
   return userName;
 };
 
-export default (questType, generateQuest, checkAnswer) => {
+export default (questType = null, generateQuest = null, checkAnswer = null) => {
   let roundCounter = 0;
   userName = sayHello();
 
-  while (roundCounter < roundsLimit) {
+  while (roundCounter < roundsLimit && questType) {
     const questNum = generateQuest();
     const correctAnswer = checkAnswer(questNum);
     const userAnswer = cli(questType, questNum);
