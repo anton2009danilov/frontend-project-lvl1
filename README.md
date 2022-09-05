@@ -23,15 +23,13 @@ npm link
 
 ### Commands
 
-brain-even          --  Start "Even number, not even number" game. Player should tell if the showed number is even by typing "yes" or "no" in a command line.
-
-brain-calc          --  Start "Make a calculation" game. Player's task is to make a simple calculation with two numbers and type the right answer.
-
-brain-gcd           --  Start "Greatest common divider" game. Player should find the biggest common divider of two given numbers.
-
-brain-progression   --  Start "Find missed number" game. Player should type a number missed in a progression.
-
-brain-prime         --  Start brain-prime game. Player should tell if showed number is prime.
+| Command           | Description                                                                                                                           |
+| ----------------- | :-----------------------------------------------------------------------------------------------------------------------------------: |
+| brain-even        | Start "Even number, not even number" game. Player should tell if the showed number is even by typing "yes" or "no" in a command line. |
+| brain-calc        | Start "Make a calculation" game. Player's task is to make a simple calculation with two numbers and type the right answer.            |
+| brain-gcd         | Start "Greatest common divider" game. Player should find the biggest common divider of two given numbers.                             |
+| brain-progression | Start "Find missed number" game. Player should type a number missed in a progression.                                                 |
+| brain-prime       | Start brain-prime game. Player should tell if showed number is prime.                                                                 |
 
 
 ### brain-even game demo:
