@@ -5,13 +5,42 @@
 
 [![Node CI](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/anton2009danilov/frontend-project-lvl1/actions/workflows/main.yml)
 
+### Project description
+
+There are five simple command line games. In every game player wins if he gives three right answers in a row. Making a mistake leads to losing.
+
+
+### Project installation
+
+git clone https://github.com/anton2009danilov/frontend-project-lvl1
+
+cd frontend-project-lvl1
+
+npm ci
+
+npm link
+
+
+### Commands
+
+brain-even          --  Start "Even number, not even number" game. Player should tell if the showed number is even by typing "yes" or "no" in a command line.
+
+brain-calc          --  Start "Make a calculation" game. Player's task is to make a simple calculation with two numbers and type the right answer.
+
+brain-gcd           --  Start "Greatest common divider" game. Player should find the biggest common divider of two given numbers.
+
+brain-progression   --  Start "Find missed number" game. Player should type a number missed in a progression.
+
+brain-prime         --  Start brain-prime game. Player should tell if showed number is prime.
+
+
 ### brain-even game demo:
 [![asciicast](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC.svg)](https://asciinema.org/a/bDxl2Iq2pT9ebAqvGkjyXhXSC)
 
 ### brain-calc game demo:
 [![asciicast](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k.svg)](https://asciinema.org/a/1q1WmFZg9paM96jmVi9tC4m2k)
 
-### brain-bcd(biggest common divider) game demo:
+### brain-gcd (greatest common divider) game demo:
 [![asciicast](https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w.svg)](https://asciinema.org/a/X2yqECb06oDlje2EN5Bjbzx4w)
 
 ### brain-progression game demo:
