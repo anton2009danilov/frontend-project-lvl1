@@ -1,8 +1,5 @@
-#!/usr/bin/env node
-import runGame from '../index.js';
-
 const digitCapacity = 100;
-const questType = 'brain-even';
+
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
@@ -23,12 +20,14 @@ const isPrime = (num) => {
   return true;
 };
 
+const generateQuestionText = (num) => 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+  + `Question: ${num}\n`
+  + 'Your answer: ';
+
 const calcAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
-const generateQuest = () => {
+export default () => {
   const num = Math.floor(Math.random() * digitCapacity);
 
-  return [num, calcAnswer(num)];
+  return [calcAnswer(num), generateQuestionText(num)];
 };
-
-runGame(questType, generateQuest);
