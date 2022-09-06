@@ -22,7 +22,7 @@ const calcAnswer = (questArr) => {
   return result;
 };
 
-export const generateQuestionText = (questData) => {
+const generateQuestionText = (questData) => {
   const [num1, num2, sign] = questData;
 
   return 'What is the result of the expression?\n'
