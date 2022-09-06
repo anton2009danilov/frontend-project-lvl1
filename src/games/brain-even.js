@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import runGame from '../src/index.js';
+import runGame from '../index.js';
 
 const digitCapacity = 1000;
 const questType = 'brain-even';
