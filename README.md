@@ -12,14 +12,15 @@ There are five simple command line games. In every game player wins if he gives 
 
 ### Project installation
 
-'git clone https://github.com/anton2009danilov/frontend-project-lvl1'
+'''
+git clone https://github.com/anton2009danilov/frontend-project-lvl1
 
-'cd frontend-project-lvl1'
+cd frontend-project-lvl1
 
-'npm ci'
+npm ci
 
-'npm link'
-
+npm link
+'''
 
 ### Commands
 
