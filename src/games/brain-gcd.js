@@ -1,8 +1,4 @@
-#!/usr/bin/env node
-import runGame from '../index.js';
-
 const digitCapacity = 101;
-const questType = 'brain-gcd';
 
 const findBiggestCommonDivider = (num1, num2) => {
   let maxDivider = num1 >= num2 ? num1 : num2;
@@ -31,12 +27,18 @@ const calcAnswer = (questData) => {
   return findBiggestCommonDivider(num1, num2);
 };
 
-const generateQuest = () => {
+const generateQuestionText = (questData) => {
+  const [num1, num2] = questData;
+
+  return 'Find the greatest common divisor of given numbers.\n'
+  + `Question: ${num1} ${num2}\n`
+  + 'Your answer: ';
+};
+
+export default () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
   const questArr = [num1, num2];
 
-  return [questArr, calcAnswer(questArr)];
+  return [calcAnswer(questArr), generateQuestionText(questArr)];
 };
-
-runGame(questType, generateQuest, calcAnswer);
