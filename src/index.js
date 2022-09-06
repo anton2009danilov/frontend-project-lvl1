@@ -1,23 +1,31 @@
-import cli from './cli.js';
+import readlineSync from 'readline-sync';
+
+const getUserName = () => {
+  const userName = readlineSync.question('May I have your name? ');
+  return (userName !== '' ? userName : 'Anonymous');
+};
 
 const roundsLimit = 3;
 let userName = '';
 
 const sayHello = () => {
   console.log('Welcome to the Brain Games!');
-  userName = cli('name');
+  userName = getUserName();
   console.log(`Hello, ${userName}!`);
   return userName;
 };
 
-export default (questType = null, generateQuest = null) => {
+const askQuestion = (questionText) => readlineSync.question(questionText);
+
+export default (generateQuest) => {
   let roundCounter = 0;
   userName = sayHello();
 
-  while (roundCounter < roundsLimit && questType) {
+  while (roundCounter < roundsLimit) {
     const questData = generateQuest();
-    const userAnswer = cli(questType, questData);
-    const [, correctAnswer] = questData;
+    const [, questQuestionText] = questData;
+    const userAnswer = askQuestion(questQuestionText);
+    const [correctAnswer] = questData;
 
     if (userAnswer === String(correctAnswer)) {
       roundCounter += 1;

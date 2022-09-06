@@ -1,8 +1,4 @@
-#!/usr/bin/env node
-import runGame from '../index.js';
-
 const digitCapacity = 100;
-const questType = 'brain-calc';
 
 const calcAnswer = (questArr) => {
   const [num1, num2, sign] = questArr;
@@ -26,7 +22,15 @@ const calcAnswer = (questArr) => {
   return result;
 };
 
-const generateQuest = () => {
+export const generateQuestionText = (questData) => {
+  const [num1, num2, sign] = questData;
+
+  return 'What is the result of the expression?\n'
+  + `Question: ${num1} ${sign} ${num2}\n`
+  + 'Your answer: ';
+};
+
+export default () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
 
@@ -41,7 +45,5 @@ const generateQuest = () => {
 
   const questArr = [num1, num2, sign];
 
-  return [questArr, calcAnswer(questArr)];
+  return [calcAnswer(questArr), generateQuestionText(questArr)];
 };
-
-runGame(questType, generateQuest);
