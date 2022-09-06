@@ -19,7 +19,7 @@ cd frontend-project-lvl1
 
 npm ci
 
-npm link
+sudo npm link
 ```
 
 ### Commands
