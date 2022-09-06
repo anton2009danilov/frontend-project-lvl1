@@ -17,9 +17,13 @@ const sayHello = () => {
 
 const askQuestion = (questionText) => readlineSync.question(questionText);
 
-export default (generateQuest) => {
+export default (generateQuest = null) => {
   let roundCounter = 0;
   userName = sayHello();
+
+  if (!generateQuest) {
+    return;
+  }
 
   while (roundCounter < roundsLimit) {
     const questData = generateQuest();
