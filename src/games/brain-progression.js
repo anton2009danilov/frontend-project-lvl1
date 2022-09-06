@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-import runGame from '../index.js';
-
 const digitCapacity = 100;
-const questType = 'brain-progression';
 
 const stepBottomLimit = 1;
 const stepTopLimit = 21;
 const minLength = 5;
 const maxLength = 10;
 
-const generateQuest = () => {
+const generateQuestionText = (questString) => 'What number is missing in the progression?\n'
++ `Question: ${questString}\n`
++ 'Your answer: ';
+
+export default () => {
   const progression = [];
 
   const length = Math.floor(Math.random() * (maxLength - minLength) + minLength);
@@ -31,7 +31,5 @@ const generateQuest = () => {
     position += 1;
   } while (position < length);
 
-  return [progression.join(' '), secretNum];
+  return [secretNum, generateQuestionText(progression.join(' '))];
 };
-
-runGame(questType, generateQuest);
