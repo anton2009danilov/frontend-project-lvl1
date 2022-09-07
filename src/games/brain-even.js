@@ -1,3 +1,5 @@
+import runGame from '../index.js';
+
 const digitCapacity = 1000;
 const isEven = (num) => num % 2 === 0;
 
@@ -7,8 +9,10 @@ const generateQuestionText = (num) => 'Answer "yes" if the number is even, other
   + `Question: ${num}\n`
   + 'Your answer: ';
 
-export default () => {
+const generateQuest = () => {
   const num = Math.floor(Math.random() * digitCapacity);
 
   return [calcAnswer(num), generateQuestionText(num)];
 };
+
+export default () => runGame(generateQuest);

@@ -1,3 +1,5 @@
+import runGame from '../index.js';
+
 const digitCapacity = 100;
 
 const stepBottomLimit = 1;
@@ -9,7 +11,7 @@ const generateQuestionText = (questString) => 'What number is missing in the pro
 + `Question: ${questString}\n`
 + 'Your answer: ';
 
-export default () => {
+const generateQuest = () => {
   const progression = [];
 
   const length = Math.floor(Math.random() * (maxLength - minLength) + minLength);
@@ -33,3 +35,5 @@ export default () => {
 
   return [String(secretNum), generateQuestionText(progression.join(' '))];
 };
+
+export default () => runGame(generateQuest);

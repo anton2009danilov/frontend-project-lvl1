@@ -1,3 +1,5 @@
+import runGame from '../index.js';
+
 const digitCapacity = 101;
 
 const findBiggestCommonDivider = (num1, num2) => {
@@ -35,10 +37,12 @@ const generateQuestionText = (questData) => {
   + 'Your answer: ';
 };
 
-export default () => {
+const generateQuest = () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
   const questArr = [num1, num2];
 
   return [calcAnswer(questArr), generateQuestionText(questArr)];
 };
+
+export default () => runGame(generateQuest);

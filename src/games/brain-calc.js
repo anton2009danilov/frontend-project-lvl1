@@ -1,3 +1,5 @@
+import runGame from '../index.js';
+
 const digitCapacity = 100;
 
 const calcAnswer = (questArr) => {
@@ -22,7 +24,7 @@ const calcAnswer = (questArr) => {
   return String(result);
 };
 
-export const generateQuestionText = (questData) => {
+const generateQuestionText = (questData) => {
   const [num1, num2, sign] = questData;
 
   return 'What is the result of the expression?\n'
@@ -30,7 +32,7 @@ export const generateQuestionText = (questData) => {
   + 'Your answer: ';
 };
 
-export default () => {
+const generateQuest = () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
 
@@ -47,3 +49,5 @@ export default () => {
 
   return [calcAnswer(questArr), generateQuestionText(questArr)];
 };
+
+export default () => runGame(generateQuest);

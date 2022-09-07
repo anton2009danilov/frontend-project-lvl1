@@ -1,3 +1,5 @@
+import runGame from '../index.js';
+
 const digitCapacity = 100;
 
 const isPrime = (num) => {
@@ -26,8 +28,10 @@ const generateQuestionText = (num) => 'Answer "yes" if given number is prime. Ot
 
 const calcAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
-export default () => {
+const generateQuest = () => {
   const num = Math.floor(Math.random() * digitCapacity);
 
   return [calcAnswer(num), generateQuestionText(num)];
 };
+
+export default () => runGame(generateQuest);
