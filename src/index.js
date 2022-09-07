@@ -1,24 +1,12 @@
 import readlineSync from 'readline-sync';
-
-const getUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  return (userName !== '' ? userName : 'Anonymous');
-};
+import sayHello from './games/brain-games.js';
 
 const roundsLimit = 3;
-let userName = '';
-
-const sayHello = () => {
-  console.log('Welcome to the Brain Games!');
-  userName = getUserName();
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
 
 const askQuestion = (questionText) => readlineSync.question(questionText);
 
 export default (generateQuest = null) => {
-  userName = sayHello();
+  const userName = sayHello();
 
   if (!generateQuest) {
     return;
