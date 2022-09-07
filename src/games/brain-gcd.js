@@ -32,9 +32,10 @@ const calcAnswer = (questData) => {
 const generateQuestionText = (questData) => {
   const [num1, num2] = questData;
 
-  return 'Find the greatest common divisor of given numbers.\n'
-  + `Question: ${num1} ${num2}\n`
-  + 'Your answer: ';
+  const description = 'Find the greatest common divisor of given numbers.\n';
+  const task = `Question: ${num1} ${num2}\n`;
+
+  return `${description}${task}`;
 };
 
 const generateQuest = () => {

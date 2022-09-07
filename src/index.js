@@ -15,7 +15,8 @@ export default (generateQuest = null) => {
   for (let i = 1; i <= roundsLimit; i += 1) {
     const questData = generateQuest();
     const [, questQuestionText] = questData;
-    const userAnswer = askQuestion(questQuestionText);
+    const answerRequestStr = 'Your answer: ';
+    const userAnswer = askQuestion(`${questQuestionText}${answerRequestStr}`);
     const [correctAnswer] = questData;
 
     if (userAnswer === correctAnswer) {

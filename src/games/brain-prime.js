@@ -22,9 +22,12 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateQuestionText = (num) => 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
-  + `Question: ${num}\n`
-  + 'Your answer: ';
+const generateQuestionText = (num) => {
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+  const task = `Question: ${num}\n`;
+
+  return `${description}${task}`;
+};
 
 const calcAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 

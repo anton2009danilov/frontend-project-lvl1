@@ -7,9 +7,12 @@ const stepTopLimit = 21;
 const minLength = 5;
 const maxLength = 10;
 
-const generateQuestionText = (questString) => 'What number is missing in the progression?\n'
-+ `Question: ${questString}\n`
-+ 'Your answer: ';
+const generateQuestionText = (questString) => {
+  const description = 'What number is missing in the progression?\n';
+  const task = `Question: ${questString}\n`;
+
+  return `${description}${task}`;
+};
 
 const generateQuest = () => {
   const progression = [];

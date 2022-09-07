@@ -27,9 +27,10 @@ const calcAnswer = (questArr) => {
 const generateQuestionText = (questData) => {
   const [num1, num2, sign] = questData;
 
-  return 'What is the result of the expression?\n'
-  + `Question: ${num1} ${sign} ${num2}\n`
-  + 'Your answer: ';
+  const description = 'What is the result of the expression?\n';
+  const task = `Question: ${num1} ${sign} ${num2}\n`;
+
+  return `${description}${task}`;
 };
 
 const generateQuest = () => {
