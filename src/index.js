@@ -32,12 +32,14 @@ export default (generateQuest = null) => {
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
+
+      if (i === roundsLimit) {
+        console.log(`Congratulations, ${userName}!`);
+      }
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`
       + `Let's try again, ${userName}!`);
       break;
     }
   }
-
-  console.log(`Congratulations, ${userName}!`);
 };
