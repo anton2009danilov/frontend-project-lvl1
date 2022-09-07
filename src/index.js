@@ -5,7 +5,7 @@ const roundsLimit = 3;
 
 const askQuestion = (questionText) => readlineSync.question(questionText);
 
-export default (generateQuest = null) => {
+export default (generateQuest) => {
   const userName = sayHello();
 
   if (!generateQuest) {
