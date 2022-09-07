@@ -18,30 +18,26 @@ const sayHello = () => {
 const askQuestion = (questionText) => readlineSync.question(questionText);
 
 export default (generateQuest = null) => {
-  let roundCounter = 0;
   userName = sayHello();
 
   if (!generateQuest) {
     return;
   }
 
-  while (roundCounter < roundsLimit) {
+  for (let i = 0; i < roundsLimit; i += 1) {
     const questData = generateQuest();
     const [, questQuestionText] = questData;
     const userAnswer = askQuestion(questQuestionText);
     const [correctAnswer] = questData;
 
     if (userAnswer === correctAnswer) {
-      roundCounter += 1;
       console.log('Correct!');
-
-      if (roundCounter === roundsLimit) {
-        console.log(`Congratulations, ${userName}!`);
-      }
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`
+      + `Let's try again, ${userName}!`);
       break;
     }
   }
+
+  console.log(`Congratulations, ${userName}!`);
 };
