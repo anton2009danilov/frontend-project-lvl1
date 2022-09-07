@@ -31,7 +31,7 @@ export default (generateQuest = null) => {
     const userAnswer = askQuestion(questQuestionText);
     const [correctAnswer] = questData;
 
-    if (userAnswer === String(correctAnswer)) {
+    if (userAnswer === correctAnswer) {
       roundCounter += 1;
       console.log('Correct!');
 

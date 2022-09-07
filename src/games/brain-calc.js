@@ -19,10 +19,10 @@ const calcAnswer = (questArr) => {
       break;
   }
 
-  return result;
+  return String(result);
 };
 
-const generateQuestionText = (questData) => {
+export const generateQuestionText = (questData) => {
   const [num1, num2, sign] = questData;
 
   return 'What is the result of the expression?\n'

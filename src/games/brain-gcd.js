@@ -18,7 +18,7 @@ const findBiggestCommonDivider = (num1, num2) => {
     }
   }
 
-  return result;
+  return String(result);
 };
 
 const calcAnswer = (questData) => {

@@ -31,5 +31,5 @@ export default () => {
     position += 1;
   } while (position < length);
 
-  return [secretNum, generateQuestionText(progression.join(' '))];
+  return [String(secretNum), generateQuestionText(progression.join(' '))];
 };
