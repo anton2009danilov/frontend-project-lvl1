@@ -30,13 +30,12 @@ export default (generateQuest = null) => {
     const userAnswer = askQuestion(questQuestionText);
     const [correctAnswer] = questData;
 
-    if (i === roundsLimit) {
-      console.log(`Congratulations, ${userName}!`);
-      break;
-    }
-
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
+
+      if (i === roundsLimit) {
+        console.log(`Congratulations, ${userName}!`);
+      }
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`
       + `Let's try again, ${userName}!`);
