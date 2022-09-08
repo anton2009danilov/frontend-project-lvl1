@@ -1,5 +1,6 @@
 import runGame from '../index.js';
 
+const gameName = 'brain-prime';
 const digitCapacity = 100;
 
 const isPrime = (num) => {
@@ -22,19 +23,12 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateQuestionText = (num) => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
-  const task = `Question: ${num}\n`;
-
-  return `${description}${task}`;
-};
-
 const calcAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
 const generateQuest = () => {
   const num = Math.floor(Math.random() * digitCapacity);
 
-  return [calcAnswer(num), generateQuestionText(num)];
+  return [calcAnswer(num), num];
 };
 
-export default () => runGame(generateQuest);
+export default () => runGame(gameName, generateQuest);

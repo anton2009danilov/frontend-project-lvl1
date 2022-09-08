@@ -1,5 +1,6 @@
 import runGame from '../index.js';
 
+const gameName = 'brain-gcd';
 const digitCapacity = 101;
 
 const findBiggestCommonDivider = (num1, num2) => {
@@ -29,21 +30,12 @@ const calcAnswer = (questData) => {
   return findBiggestCommonDivider(num1, num2);
 };
 
-const generateQuestionText = (questData) => {
-  const [num1, num2] = questData;
-
-  const description = 'Find the greatest common divisor of given numbers.\n';
-  const task = `Question: ${num1} ${num2}\n`;
-
-  return `${description}${task}`;
-};
-
 const generateQuest = () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
   const questArr = [num1, num2];
 
-  return [calcAnswer(questArr), generateQuestionText(questArr)];
+  return [calcAnswer(questArr), questArr];
 };
 
-export default () => runGame(generateQuest);
+export default () => runGame(gameName, generateQuest);

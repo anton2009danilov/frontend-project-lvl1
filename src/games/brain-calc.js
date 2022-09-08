@@ -1,12 +1,13 @@
 import runGame from '../index.js';
 
+const gameName = 'brain-calc';
 const digitCapacity = 100;
 
 const calcAnswer = (questArr) => {
-  const [num1, num2, sign] = questArr;
+  const [num1, num2, signStr] = questArr;
   let resultNum;
 
-  switch (sign) {
+  switch (signStr) {
     case '+':
       resultNum = num1 + num2;
       break;
@@ -24,15 +25,6 @@ const calcAnswer = (questArr) => {
   return String(resultNum);
 };
 
-const generateQuestionText = (questData) => {
-  const [num1, num2, sign] = questData;
-
-  const description = 'What is the result of the expression?\n';
-  const task = `Question: ${num1} ${sign} ${num2}\n`;
-
-  return `${description}${task}`;
-};
-
 const generateQuest = () => {
   const num1 = Math.floor(Math.random() * digitCapacity);
   const num2 = Math.floor(Math.random() * digitCapacity);
@@ -46,9 +38,9 @@ const generateQuest = () => {
 
   const sign = genSign();
 
-  const questArr = [num1, num2, sign];
+  const questData = [num1, num2, sign];
 
-  return [calcAnswer(questArr), generateQuestionText(questArr)];
+  return [calcAnswer(questData), questData];
 };
 
-export default () => runGame(generateQuest);
+export default () => runGame(gameName, generateQuest);
