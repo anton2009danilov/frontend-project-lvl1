@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import generateRandomNum from '../generateRandomNum.js';
 
 const gameName = 'brain-progression';
 const digitCapacity = 100;
@@ -11,10 +12,10 @@ const maxLength = 10;
 const generateQuest = () => {
   const progression = [];
 
-  const length = Math.floor(Math.random() * (maxLength - minLength) + minLength);
-  let newNum = Math.floor(Math.random() * digitCapacity);
-  const secretNumPosition = Math.floor(Math.random() * length);
-  const step = Math.floor(Math.random() * (stepTopLimit - stepBottomLimit) + stepBottomLimit);
+  const length = generateRandomNum(maxLength - minLength, minLength);
+  let newNum = generateRandomNum(digitCapacity);
+  const secretNumPosition = generateRandomNum(length);
+  const step = generateRandomNum(stepTopLimit - stepBottomLimit, stepBottomLimit);
   let position = 0;
   let secretNum;
 

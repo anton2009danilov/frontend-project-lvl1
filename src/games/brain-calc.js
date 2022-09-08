@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import generateRandomNum from '../generateRandomNum.js';
 
 const gameName = 'brain-calc';
 const digitCapacity = 100;
@@ -26,12 +27,12 @@ const calcAnswer = (questArr) => {
 };
 
 const generateQuest = () => {
-  const num1 = Math.floor(Math.random() * digitCapacity);
-  const num2 = Math.floor(Math.random() * digitCapacity);
+  const num1 = generateRandomNum(digitCapacity);
+  const num2 = generateRandomNum(digitCapacity);
 
   const genSign = () => {
     const mathSigns = ['+', '-', '*'];
-    const random = Math.floor(Math.random() * mathSigns.length);
+    const random = generateRandomNum(mathSigns.length);
 
     return mathSigns[random];
   };

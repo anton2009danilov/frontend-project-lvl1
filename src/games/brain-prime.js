@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import generateRandomNum from '../generateRandomNum.js';
 
 const gameName = 'brain-prime';
 const digitCapacity = 100;
@@ -26,7 +27,7 @@ const isPrime = (num) => {
 const calcAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
 const generateQuest = () => {
-  const num = Math.floor(Math.random() * digitCapacity);
+  const num = generateRandomNum(digitCapacity);
 
   return [calcAnswer(num), num];
 };

@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import generateRandomNum from '../generateRandomNum.js';
 
 const gameName = 'brain-gcd';
 const digitCapacity = 101;
@@ -31,8 +32,8 @@ const calcAnswer = (questData) => {
 };
 
 const generateQuest = () => {
-  const num1 = Math.floor(Math.random() * digitCapacity);
-  const num2 = Math.floor(Math.random() * digitCapacity);
+  const num1 = generateRandomNum(digitCapacity);
+  const num2 = generateRandomNum(digitCapacity);
   const questArr = [num1, num2];
 
   return [calcAnswer(questArr), questArr];
