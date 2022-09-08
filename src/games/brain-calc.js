@@ -4,24 +4,24 @@ const digitCapacity = 100;
 
 const calcAnswer = (questArr) => {
   const [num1, num2, sign] = questArr;
-  let result;
+  let resultNum;
 
   switch (sign) {
     case '+':
-      result = num1 + num2;
+      resultNum = num1 + num2;
       break;
     case '-':
-      result = num1 - num2;
+      resultNum = num1 - num2;
       break;
     case '*':
-      result = num1 * num2;
+      resultNum = num1 * num2;
       break;
     default:
-      result = num1 / num2;
+      resultNum = num1 / num2;
       break;
   }
 
-  return String(result);
+  return String(resultNum);
 };
 
 const generateQuestionText = (questData) => {
