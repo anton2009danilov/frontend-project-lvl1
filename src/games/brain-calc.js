@@ -4,26 +4,26 @@ import generateRandomNum from '../generateRandomNum.js';
 const gameName = 'brain-calc';
 const digitCapacity = 100;
 
-const calcAnswer = (questArr) => {
-  const [num1, num2, signStr] = questArr;
-  let resultNum;
+const calcAnswer = (quests) => {
+  const [num1, num2, signStr] = quests;
+  let result;
 
   switch (signStr) {
     case '+':
-      resultNum = num1 + num2;
+      result = num1 + num2;
       break;
     case '-':
-      resultNum = num1 - num2;
+      result = num1 - num2;
       break;
     case '*':
-      resultNum = num1 * num2;
+      result = num1 * num2;
       break;
     default:
-      resultNum = num1 / num2;
+      result = num1 / num2;
       break;
   }
 
-  return String(resultNum);
+  return String(result);
 };
 
 const generateQuest = () => {
