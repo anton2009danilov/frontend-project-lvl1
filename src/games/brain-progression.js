@@ -12,10 +12,10 @@ const maxLength = 10;
 const generateQuest = () => {
   const progression = [];
 
-  const length = generateRandomNum(maxLength - minLength, minLength);
+  const length = generateRandomNum(maxLength, minLength);
   let newNum = generateRandomNum(digitCapacity);
   const secretNumPosition = generateRandomNum(length);
-  const step = generateRandomNum(stepTopLimit - stepBottomLimit, stepBottomLimit);
+  const step = generateRandomNum(stepTopLimit, stepBottomLimit);
   let position = 0;
   let secretNum;
 
